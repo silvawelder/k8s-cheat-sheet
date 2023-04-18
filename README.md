@@ -1,6 +1,6 @@
 # k8s-cheat-sheet
 
-## Teory
+## Theory
 
 ### Understanding Kubernetes Resource (CPU and Memory) Units
 
