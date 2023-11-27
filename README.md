@@ -27,3 +27,12 @@ Gi: Represents gibibyte, which is 2^30 bytes or 1,073,741,824 bytes.
 Ti: Represents tebibyte, which is 2^40 bytes or 1,099,511,627,776 bytes.
 
 It's important to note that when specifying CPU and memory resources for containers in Kubernetes, you need to consider the actual CPU and memory capacity of the nodes in your cluster to avoid overprovisioning or underprovisioning of resources, which can impact the performance and stability of your containerized applications.
+
+
+## Command line
+
+### Manage secrets
+
+```
+kubectl get secret secret-name -o json | jq '.data | map_values(@base64d)'
+```
