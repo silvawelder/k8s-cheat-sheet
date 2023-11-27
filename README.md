@@ -32,7 +32,7 @@ It's important to note that when specifying CPU and memory resources for contain
 ## Command line
 
 ### Manage secrets
-
+#### get all secrets values 
 ```
 kubectl get secret secret-name -o json | jq '.data | map_values(@base64d)'
 ```
