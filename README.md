@@ -39,7 +39,7 @@ kubectl get secret secret-name -o json | jq '.data | map_values(@base64d)'
 
 #### create auth token docker-registry
 ```
-kubectl create secret docker-registry <your-token-name>--docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
+kubectl create secret docker-registry <your-token-name> --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
 ```
 
 #### get auth token docker-registry
