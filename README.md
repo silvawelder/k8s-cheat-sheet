@@ -36,3 +36,14 @@ It's important to note that when specifying CPU and memory resources for contain
 ```
 kubectl get secret secret-name -o json | jq '.data | map_values(@base64d)'
 ```
+
+#### create auth token docker-registry
+```
+kubectl create secret docker-registry <your-token-name>--docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
+```
+
+#### get auth token docker-registry
+```
+kubectl get secret <your-token-name> --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
+```
+
