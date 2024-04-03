@@ -46,4 +46,6 @@ kubectl create secret docker-registry <your-token-name>--docker-server=<your-reg
 ```
 kubectl get secret <your-token-name> --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
 ```
+## References
 
+[1]- https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
