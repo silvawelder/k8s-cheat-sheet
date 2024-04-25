@@ -46,6 +46,15 @@ kubectl create secret docker-registry <your-token-name> --docker-server=<your-re
 ```
 kubectl get secret <your-token-name> --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
 ```
+
+### Network Tests
+
+#### Tools
+
+```
+kubectl run multitool --image=praqma/network-multitool:extra -n default
+```
+
 ## References
 
 [1]- https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
