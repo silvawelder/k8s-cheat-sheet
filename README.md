@@ -54,7 +54,11 @@ kubectl get secret <your-token-name> --output="jsonpath={.data.\.dockerconfigjso
 ```
 kubectl run multitool --image=praqma/network-multitool:extra -n default
 ```
-
+### Manage Nodes
+#### Delete node when is stuck or chash for any reason
+```
+kubectl patch node <nodes> -p '{"metadata":{"finalizers":null}}' --type=merge
+```
 ## References
 
 [1]- https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
